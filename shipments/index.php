@@ -149,7 +149,7 @@
                             <?php
 
                             try {
-                                $dbh = new PDO('mysql:host=localhost:3306;dbname=pctvtata_logisticsdemo', 'pctvtata_logistics', 'Anditomi2');
+                                $dbh = new PDO('mysql:host=tefiftyeight.tarhely.eu:2083;dbname=pctvtata_logisticsdemo', 'pctvtata_logistics', 'Anditomi2');
                                 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                                 // Select all records from the 'shipments' table
