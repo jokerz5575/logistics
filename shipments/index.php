@@ -132,7 +132,7 @@
 
                             // Insert a sample record
                             $insertSql = "
-                            INSERT INTO shipments (ShipmentID, ContractID, CustomerID, CarrierID, StartLocation, EndLocation, ShipmentDate, DeliveryDate, ShipmentStatus, ShipmentValue, Notes)
+                            INSERT INTO Shipments (ShipmentID, ContractID, CustomerID, CarrierID, StartLocation, EndLocation, ShipmentDate, DeliveryDate, ShipmentStatus, ShipmentValue, Notes)
                             VALUES (1, 1, 1, 1, 'Start Location', 'End Location', '2023-06-19', '2023-06-20', 'In Transit', 100.50, 'Sample notes');
                             ";
                             $dbh->exec($insertSql);
@@ -154,7 +154,7 @@
                             $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                             // Select all records from the 'shipments' table
-                            $selectSql = "SELECT * FROM shipments";
+                            $selectSql = "SELECT * FROM Shipments";
                             $stmt = $dbh->query($selectSql);
                             $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
