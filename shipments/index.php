@@ -133,7 +133,7 @@
                             // Insert a sample record
                             $insertSql = "
                             INSERT INTO Shipments (ShipmentID, ContractID, CustomerID, CarrierID, StartLocation, EndLocation, ShipmentDate, DeliveryDate, ShipmentStatus, ShipmentValue, Notes)
-                            VALUES (, , , , 'Start Location', 'End Location', '2023-06-19', '2023-06-20', 'In Transit', 100.50, 'Sample notes');
+                            VALUES (NULL, NULL, NULL, NULL, 'Start Location', 'End Location', '2023-06-19', '2023-06-20', 'In Transit', 100.50, 'Sample notes');
                             ";
                             $dbh->exec($insertSql);
                             echo "Sample record inserted successfully.";
