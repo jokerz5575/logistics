@@ -161,16 +161,15 @@
                                 echo '<table class="table table-striped">';
                                 echo '<thead>';
                                 echo '<tr>';
-                                echo '<th>ShipmentID</th>';
-                                echo '<th>ContractID</th>';
-                                echo '<th>CustomerID</th>';
-                                echo '<th>CarrierID</th>';
-                                echo '<th>StartLocation</th>';
-                                echo '<th>EndLocation</th>';
-                                echo '<th>ShipmentDate</th>';
-                                echo '<th>DeliveryDate</th>';
-                                echo '<th>ShipmentStatus</th>';
-                                echo '<th>ShipmentValue</th>';
+                                echo '<th>Contract</th>';
+                                echo '<th>Customer</th>';
+                                echo '<th>Carrier</th>';
+                                echo '<th>Start Location</th>';
+                                echo '<th>End Location</th>';
+                                echo '<th>Shipment Date</th>';
+                                echo '<th>Delivery Date</th>';
+                                echo '<th>Shipment Status</th>';
+                                echo '<th>Shipment Value</th>';
                                 echo '<th>Notes</th>';
                                 echo '</tr>';
                                 echo '</thead>';
@@ -178,7 +177,6 @@
 
                                 foreach ($results as $row) {
                                     echo '<tr>';
-                                    echo '<td>' . $row['ShipmentID'] . '</td>';
                                     echo '<td>' . $row['ContractID'] . '</td>';
                                     echo '<td>' . $row['CustomerID'] . '</td>';
                                     echo '<td>' . $row['CarrierID'] . '</td>';
