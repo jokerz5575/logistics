@@ -38,7 +38,7 @@
 <body>
     <!-- Top Navbar -->
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#"><img src="roptima.png" width="300" height="80" class="d-inline-block align-top" alt=""></a>
+        <a class="navbar-brand" href="#"><img src="roptima.png" width="175" height="40" class="d-inline-block align-top" alt=""></a>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle profile-dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -60,10 +60,10 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="https://laresys.com/logistics/"><i class="fas fa-home"></i> Dashboard</a>
+                            <a class="nav-link active" href="../"><i class="fas fa-home"></i> Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://laresys.com/logistics/shipments"><i class="fas fa-truck"></i> Shipments</a>
+                            <a class="nav-link" href="./"><i class="fas fa-truck"></i> Shipments</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fas fa-users"></i> Customers</a>
@@ -149,7 +149,7 @@
                             <?php
 
                             try {
-                                $dbh = new PDO('mysql:host=tefiftyeight.tarhely.eu:2083;dbname=pctvtata_logisticsdemo', 'pctvtata_logistics', 'Anditomi2');
+                                $dbh = new PDO('mysql:host=185.51.188.58;dbname=pctvtata_logisticsdemo', 'pctvtata_logistics', 'Anditomi2');
                                 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                                 // Select all records from the 'shipments' table
