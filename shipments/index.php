@@ -145,66 +145,67 @@
                         }
 
                         ?>
-                        <div class="col-12">
-                        <?php
+                        <div class="table-responsive">
+                            <?php
 
-                        try {
-                            $dbh = new PDO('mysql:host=localhost:3306;dbname=pctvtata_logisticsdemo', 'pctvtata_logistics', 'Anditomi2');
-                            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                            try {
+                                $dbh = new PDO('mysql:host=localhost:3306;dbname=pctvtata_logisticsdemo', 'pctvtata_logistics', 'Anditomi2');
+                                $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                            // Select all records from the 'shipments' table
-                            $selectSql = "SELECT * FROM Shipments";
-                            $stmt = $dbh->query($selectSql);
-                            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                // Select all records from the 'shipments' table
+                                $selectSql = "SELECT * FROM Shipments";
+                                $stmt = $dbh->query($selectSql);
+                                $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                            // Display the results in an HTML table
-                            echo '<table class="table table-striped">';
-                            echo '<thead>';
-                            echo '<tr>';
-                            echo '<th>ShipmentID</th>';
-                            echo '<th>ContractID</th>';
-                            echo '<th>CustomerID</th>';
-                            echo '<th>CarrierID</th>';
-                            echo '<th>StartLocation</th>';
-                            echo '<th>EndLocation</th>';
-                            echo '<th>ShipmentDate</th>';
-                            echo '<th>DeliveryDate</th>';
-                            echo '<th>ShipmentStatus</th>';
-                            echo '<th>ShipmentValue</th>';
-                            echo '<th>Notes</th>';
-                            echo '</tr>';
-                            echo '</thead>';
-                            echo '<tbody>';
-
-                            foreach ($results as $row) {
+                                // Display the results in an HTML table
+                                echo '<table class="table table-striped">';
+                                echo '<thead>';
                                 echo '<tr>';
-                                echo '<td>' . $row['ShipmentID'] . '</td>';
-                                echo '<td>' . $row['ContractID'] . '</td>';
-                                echo '<td>' . $row['CustomerID'] . '</td>';
-                                echo '<td>' . $row['CarrierID'] . '</td>';
-                                echo '<td>' . $row['StartLocation'] . '</td>';
-                                echo '<td>' . $row['EndLocation'] . '</td>';
-                                echo '<td>' . $row['ShipmentDate'] . '</td>';
-                                echo '<td>' . $row['DeliveryDate'] . '</td>';
-                                echo '<td>' . $row['ShipmentStatus'] . '</td>';
-                                echo '<td>' . $row['ShipmentValue'] . '</td>';
-                                echo '<td>' . $row['Notes'] . '</td>';
+                                echo '<th>ShipmentID</th>';
+                                echo '<th>ContractID</th>';
+                                echo '<th>CustomerID</th>';
+                                echo '<th>CarrierID</th>';
+                                echo '<th>StartLocation</th>';
+                                echo '<th>EndLocation</th>';
+                                echo '<th>ShipmentDate</th>';
+                                echo '<th>DeliveryDate</th>';
+                                echo '<th>ShipmentStatus</th>';
+                                echo '<th>ShipmentValue</th>';
+                                echo '<th>Notes</th>';
                                 echo '</tr>';
+                                echo '</thead>';
+                                echo '<tbody>';
+
+                                foreach ($results as $row) {
+                                    echo '<tr>';
+                                    echo '<td>' . $row['ShipmentID'] . '</td>';
+                                    echo '<td>' . $row['ContractID'] . '</td>';
+                                    echo '<td>' . $row['CustomerID'] . '</td>';
+                                    echo '<td>' . $row['CarrierID'] . '</td>';
+                                    echo '<td>' . $row['StartLocation'] . '</td>';
+                                    echo '<td>' . $row['EndLocation'] . '</td>';
+                                    echo '<td>' . $row['ShipmentDate'] . '</td>';
+                                    echo '<td>' . $row['DeliveryDate'] . '</td>';
+                                    echo '<td>' . $row['ShipmentStatus'] . '</td>';
+                                    echo '<td>' . $row['ShipmentValue'] . '</td>';
+                                    echo '<td>' . $row['Notes'] . '</td>';
+                                    echo '</tr>';
+                                }
+
+                                echo '</tbody>';
+                                echo '</table>';
+                                $dbh = null; // Closing the PDO connection
+
+                            } catch (PDOException $e) {
+                                echo "Error: " . $e->getMessage();
+                                $dbh = null; // Closing the PDO connection
+
                             }
 
-                            echo '</tbody>';
-                            echo '</table>';
-                            $dbh = null; // Closing the PDO connection
-
-                        } catch (PDOException $e) {
-                            echo "Error: " . $e->getMessage();
-                            $dbh = null; // Closing the PDO connection
-
-                        }
-
-                        ?>
+                            ?>
+                        </div>
                     </div>
-                </div>
+               
             </main>
         </div>
     </div>
