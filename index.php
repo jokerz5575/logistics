@@ -33,6 +33,20 @@
         .profile-dropdown {
             color: #000;
         }
+        .card-header {
+            background-color: #343a40;
+            color: #fff;
+        }
+        .card-body {
+            font-size: 1rem;
+            text-align: center;
+        }
+        .card-body i {
+            font-size: 1rem;
+        }
+        .card-body strong {
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -63,7 +77,7 @@
                             <a class="nav-link active" href="index.php"><i class="fas fa-home"></i> Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./logistics/shipments"><i class="fas fa-truck"></i> Shipments</a>
+                            <a class="nav-link" href="./shipments"><i class="fas fa-truck"></i> Shipments</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fas fa-users"></i> Customers</a>
@@ -123,7 +137,13 @@
             <!-- Content -->
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="content">
-                    <h1>SZERETLEK BABA </h1>
+                    <h1> </h1>
+                    <div class="row">
+                    <?php 
+                    include_once 'statistics/countShipments.php';
+                    include_once 'statistics/countCustomers.php';
+                    ?>
+                    </div>
                 </div>
             </main>
         </div>

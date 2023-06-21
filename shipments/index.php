@@ -63,7 +63,7 @@
                             <a class="nav-link active" href="../"><i class="fas fa-home"></i> Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./"><i class="fas fa-truck"></i> Shipments</a>
+                            <a class="nav-link" href="./shipments"><i class="fas fa-truck"></i> Shipments</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fas fa-users"></i> Customers</a>
