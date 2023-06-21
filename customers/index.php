@@ -58,7 +58,7 @@
         <div class="row">
             <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
                 <div class="sidebar-sticky">
-                <ul class="nav flex-column">
+                    <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link active" href="../"><i class="fas fa-home"></i> Dashboard</a>
                         </li>
@@ -153,7 +153,7 @@
                                 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                                 // Select all records from the 'shipments' table
-                                $selectSql = "SELECT * FROM Shipments";
+                                $selectSql = "SELECT * FROM Customers";
                                 $stmt = $dbh->query($selectSql);
                                 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -161,32 +161,32 @@
                                 echo '<table class="table table-striped">';
                                 echo '<thead>';
                                 echo '<tr>';
-                                echo '<th>Contract</th>';
-                                echo '<th>Customer</th>';
-                                echo '<th>Carrier</th>';
-                                echo '<th>Start Location</th>';
-                                echo '<th>End Location</th>';
-                                echo '<th>Shipment Date</th>';
-                                echo '<th>Delivery Date</th>';
-                                echo '<th>Shipment Status</th>';
-                                echo '<th>Shipment Value</th>';
-                                echo '<th>Notes</th>';
+                                echo '<th>F. Name</th>';
+                                echo '<th>L. Name</th>';
+                                echo '<th>Addr. 1</th>';
+                                echo '<th>Addr. 2</th>';
+                                echo '<th>City</th>';
+                                echo '<th>State</th>';
+                                echo '<th>Postal code</th>';
+                                echo '<th>Email</th>';
+                                echo '<th>Phone</th>';
+                                echo '<th>Registered</th>';
                                 echo '</tr>';
                                 echo '</thead>';
                                 echo '<tbody>';
 
                                 foreach ($results as $row) {
                                     echo '<tr>';
-                                    echo '<td>' . $row['ContractID'] . '</td>';
-                                    echo '<td>' . $row['CustomerID'] . '</td>';
-                                    echo '<td>' . $row['CarrierID'] . '</td>';
-                                    echo '<td>' . $row['StartLocation'] . '</td>';
-                                    echo '<td>' . $row['EndLocation'] . '</td>';
-                                    echo '<td>' . $row['ShipmentDate'] . '</td>';
-                                    echo '<td>' . $row['DeliveryDate'] . '</td>';
-                                    echo '<td>' . $row['ShipmentStatus'] . '</td>';
-                                    echo '<td>' . $row['ShipmentValue'] . '</td>';
-                                    echo '<td>' . $row['Notes'] . '</td>';
+                                    echo '<td>' . $row['FirstName'] . '</td>';
+                                    echo '<td>' . $row['LastName'] . '</td>';
+                                    echo '<td>' . $row['AddressLine1'] . '</td>';
+                                    echo '<td>' . $row['AddressLine2'] . '</td>';
+                                    echo '<td>' . $row['City'] . '</td>';
+                                    echo '<td>' . $row['State'] . '</td>';
+                                    echo '<td>' . $row['PostalCode'] . '</td>';
+                                    echo '<td>' . $row['Email'] . '</td>';
+                                    echo '<td>' . $row['Phone'] . '</td>';
+                                    echo '<td>' . $row['RegistrationDate'] . '</td>';
                                     echo '</tr>';
                                 }
 

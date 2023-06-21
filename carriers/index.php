@@ -58,7 +58,7 @@
         <div class="row">
             <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
                 <div class="sidebar-sticky">
-                <ul class="nav flex-column">
+                    <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link active" href="../"><i class="fas fa-home"></i> Dashboard</a>
                         </li>
@@ -153,7 +153,7 @@
                                 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                                 // Select all records from the 'shipments' table
-                                $selectSql = "SELECT * FROM Shipments";
+                                $selectSql = "SELECT * FROM Carriers";
                                 $stmt = $dbh->query($selectSql);
                                 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -161,32 +161,22 @@
                                 echo '<table class="table table-striped">';
                                 echo '<thead>';
                                 echo '<tr>';
-                                echo '<th>Contract</th>';
-                                echo '<th>Customer</th>';
-                                echo '<th>Carrier</th>';
-                                echo '<th>Start Location</th>';
-                                echo '<th>End Location</th>';
-                                echo '<th>Shipment Date</th>';
-                                echo '<th>Delivery Date</th>';
-                                echo '<th>Shipment Status</th>';
-                                echo '<th>Shipment Value</th>';
-                                echo '<th>Notes</th>';
+                                echo '<th>Name</th>';
+                                echo '<th>Contact</th>';
+                                echo '<th>Phone</th>';
+                                echo '<th>Email</th>';
+                                echo '<th>Addr.</th>';
                                 echo '</tr>';
                                 echo '</thead>';
                                 echo '<tbody>';
 
                                 foreach ($results as $row) {
                                     echo '<tr>';
-                                    echo '<td>' . $row['ContractID'] . '</td>';
-                                    echo '<td>' . $row['CustomerID'] . '</td>';
-                                    echo '<td>' . $row['CarrierID'] . '</td>';
-                                    echo '<td>' . $row['StartLocation'] . '</td>';
-                                    echo '<td>' . $row['EndLocation'] . '</td>';
-                                    echo '<td>' . $row['ShipmentDate'] . '</td>';
-                                    echo '<td>' . $row['DeliveryDate'] . '</td>';
-                                    echo '<td>' . $row['ShipmentStatus'] . '</td>';
-                                    echo '<td>' . $row['ShipmentValue'] . '</td>';
-                                    echo '<td>' . $row['Notes'] . '</td>';
+                                    echo '<td>' . $row['CarrierName'] . '</td>';
+                                    echo '<td>' . $row['ContactPerson'] . '</td>';
+                                    echo '<td>' . $row['ContactNumber'] . '</td>';
+                                    echo '<td>' . $row['Email'] . '</td>';
+                                    echo '<td>' . $row['Address'] . '</td>';
                                     echo '</tr>';
                                 }
 

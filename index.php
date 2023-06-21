@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baba Logisztika KFT.</title>
+    <title>RouteOptima Beta | 0.2</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <style>
@@ -72,18 +72,18 @@
         <div class="row">
             <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
                 <div class="sidebar-sticky">
-                    <ul class="nav flex-column">
+                <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.php"><i class="fas fa-home"></i> Dashboard</a>
+                            <a class="nav-link active" href="../"><i class="fas fa-home"></i> Dashboard</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./shipments"><i class="fas fa-truck"></i> Shipments</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-users"></i> Customers</a>
+                            <a class="nav-link" href="./customers"><i class="fas fa-users"></i> Customers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-building"></i> Carriers</a>
+                            <a class="nav-link" href="./carriers"><i class="fas fa-building"></i> Carriers</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fas fa-file-contract"></i> Contracts</a>
