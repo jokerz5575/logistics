@@ -123,28 +123,6 @@
             <!-- Content -->
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="content">
-                        <?php
-
-                        // try {
-                        //     $dbh = new PDO('mysql:host=localhost:3306;dbname=pctvtata_logisticsdemo', 'pctvtata_logistics', 'Anditomi2');
-                        //     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                        //     // Insert a sample record
-                        //     $insertSql = "
-                        //     INSERT INTO Shipments (ShipmentID, ContractID, CustomerID, CarrierID, StartLocation, EndLocation, ShipmentDate, DeliveryDate, ShipmentStatus, ShipmentValue, Notes)
-                        //     VALUES (1, NULL, NULL, NULL, 'Start Location', 'End Location', '2023-06-19', '2023-06-20', 'In Transit', 100.50, 'Sample notes');
-                        //     ";
-                        //     $dbh->exec($insertSql);
-                        //     echo "Sample record inserted successfully.";
-                        //     $dbh = null; // Closing the PDO connection
-
-                        // } catch (PDOException $e) {
-                        //     echo "Error: " . $e->getMessage();
-                        //     $dbh = null; // Closing the PDO connection
-
-                        // }
-
-                        ?>
                         <div class="table-responsive">
                             <?php
 
