@@ -38,7 +38,7 @@
 <body>
     <!-- Top Navbar -->
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#"><img src="roptima.png" width="180" height="40" class="d-inline-block align-top" alt=""></a>
+        <a class="navbar-brand" href="#"><img src="assets/roptima.png" width="180" height="40" class="d-inline-block align-top" alt=""></a>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle profile-dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
